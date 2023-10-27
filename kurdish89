@@ -1162,7 +1162,7 @@ UserIDTargetLabel.BorderSizePixel = 0
 UserIDTargetLabel.Position = UDim2.new(0, 150, 0, 70)
 UserIDTargetLabel.Size = UDim2.new(0, 300, 0, 75)
 UserIDTargetLabel.Font = Enum.Font.Oswald
-UserIDTargetLabel.Text = "UserID: \nDisplay: \nJoined: "
+UserIDTargetLabel.Text = "ئایدی: \nناف: \nتاریخ: "
 UserIDTargetLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
 UserIDTargetLabel.TextSize = 18.000
 UserIDTargetLabel.TextWrapped = true
@@ -2155,11 +2155,11 @@ local function UpdateTarget(player)
 	if (player ~= nil) then
 		TargetedPlayer = player.Name
 		TargetName_Input.Text = player.Name
-		UserIDTargetLabel.Text = ("UserID: "..player.UserId.."\nDisplay: "..player.DisplayName.."\nJoined: "..os.date("%d-%m-%Y", os.time()-player.AccountAge * 24 * 3600).." [Day/Month/Year]")
+		UserIDTargetLabel.Text = ("ئایدی: "..player.UserId.."\nناڤ: "..player.DisplayName.."\nتاریخ: "..os.date("%d-%m-%Y", os.time()-player.AccountAge * 24 * 3600).." [روژ/هەیڤ/ساڵ]")
 		TargetImage.Image = Players:GetUserThumbnailAsync(player.UserId,Enum.ThumbnailType.HeadShot,Enum.ThumbnailSize.Size420x420)
 	else
-		TargetName_Input.Text = "@target..."
-		UserIDTargetLabel.Text = "UserID: \nDisplay: \nJoined: "
+		TargetName_Input.Text = "@یوزەرێ وی/ێ..."
+		UserIDTargetLabel.Text = "ئایدی: \nناڤ: \nتاریخ: "
 		TargetImage.Image = "rbxassetid://10818605405"
 		TargetedPlayer = nil
 		if FlingTarget_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
