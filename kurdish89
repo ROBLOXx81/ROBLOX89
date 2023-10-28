@@ -1,6 +1,6 @@
 --RELOAD GUI
 if game.CoreGui:FindFirstChild("SysBroker") then
-	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "System Broken",Text = "GUI Already loaded, rejoin to re-execute",Duration = 5;})
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Mzury",Text = "GUI Already loaded, rejoin to re-execute",Duration = 5;})
 	return
 end
 local version = 2
@@ -1208,7 +1208,7 @@ FocusTarget_Button.BorderSizePixel = 0
 FocusTarget_Button.Position = UDim2.new(0, 25, 0, 200)
 FocusTarget_Button.Size = UDim2.new(0, 150, 0, 30)
 FocusTarget_Button.Font = Enum.Font.Oswald
-FocusTarget_Button.Text = "Focus"
+FocusTarget_Button.Text = "خەربەطە"
 FocusTarget_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FocusTarget_Button.TextScaled = true
 FocusTarget_Button.TextSize = 14.000
@@ -1789,7 +1789,7 @@ Explode_Button.BorderSizePixel = 0
 Explode_Button.Position = UDim2.new(0, 25, 0, 225)
 Explode_Button.Size = UDim2.new(0, 150, 0, 30)
 Explode_Button.Font = Enum.Font.Oswald
-Explode_Button.Text = "Explode"
+Explode_Button.Text = "دناف دیوارا بچی"
 Explode_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 Explode_Button.TextScaled = true
 Explode_Button.TextSize = 14.000
@@ -1804,7 +1804,7 @@ Rejoin_Button.BorderSizePixel = 0
 Rejoin_Button.Position = UDim2.new(0, 25, 0, 275)
 Rejoin_Button.Size = UDim2.new(0, 150, 0, 30)
 Rejoin_Button.Font = Enum.Font.Oswald
-Rejoin_Button.Text = "Rejoin"
+Rejoin_Button.Text = "دبارە چونا سێرفەری"
 Rejoin_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 Rejoin_Button.TextScaled = true
 Rejoin_Button.TextSize = 14.000
@@ -1819,7 +1819,7 @@ CMDX_Button.BorderSizePixel = 0
 CMDX_Button.Position = UDim2.new(0, 210, 0, 175)
 CMDX_Button.Size = UDim2.new(0, 150, 0, 30)
 CMDX_Button.Font = Enum.Font.Oswald
-CMDX_Button.Text = "CMDX"
+CMDX_Button.Text = "چاتێ فەیک"
 CMDX_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 CMDX_Button.TextScaled = true
 CMDX_Button.TextSize = 14.000
@@ -1834,7 +1834,7 @@ InfYield_Button.BorderSizePixel = 0
 InfYield_Button.Position = UDim2.new(0, 25, 0, 175)
 InfYield_Button.Size = UDim2.new(0, 150, 0, 30)
 InfYield_Button.Font = Enum.Font.Oswald
-InfYield_Button.Text = "Infinite Yield"
+InfYield_Button.Text = "سکریپت v2"
 InfYield_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 InfYield_Button.TextScaled = true
 InfYield_Button.TextSize = 14.000
@@ -1849,7 +1849,7 @@ FreeEmotes_Button.BorderSizePixel = 0
 FreeEmotes_Button.Position = UDim2.new(0, 210, 0, 225)
 FreeEmotes_Button.Size = UDim2.new(0, 150, 0, 30)
 FreeEmotes_Button.Font = Enum.Font.Oswald
-FreeEmotes_Button.Text = "Free emotes"
+FreeEmotes_Button.Text = "دانس"
 FreeEmotes_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 FreeEmotes_Button.TextScaled = true
 FreeEmotes_Button.TextSize = 14.000
@@ -2148,7 +2148,7 @@ end
 local function UpdateTarget(player)
 	pcall(function()
 		if table.find(ForceWhitelist,player.UserId) then
-			SendNotify("System Broken","You cant target this player: @"..player.Name.." / "..player.DisplayName,5)
+			SendNotify("Mzury","You cant target this player: @"..player.Name.." / "..player.DisplayName,5)
 			player = nil
 		end
 	end)
@@ -2517,7 +2517,7 @@ end)
 CMDBar.FocusLost:Connect(function()
 	command = CMDBar.Text
 	Players:Chat(command)
-	SendNotify("System Broken",("Executed "..command),5)
+	SendNotify("Mzury",("Executed "..command),5)
 	CMDBar.Text = ""
 end)
 
@@ -2530,7 +2530,7 @@ WalkSpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 16
 		end
 		plr.Character.Humanoid.WalkSpeed = tonumber(Speed)
-		SendNotify("System Broken","Walk speed updated.",5)
+		SendNotify("Mzury","Walk speed updated.",5)
 	end)
 end)
 
@@ -2541,7 +2541,7 @@ JumpPower_Button.MouseButton1Click:Connect(function()
 			Power = 50
 		end
 		plr.Character.Humanoid.JumpPower = tonumber(Power)
-		SendNotify("System Broken","Jump power updated.",5)
+		SendNotify("Mzury","Jump power updated.",5)
 	end)
 end)
 
@@ -2552,7 +2552,7 @@ FlySpeed_Button.MouseButton1Click:Connect(function()
 			Speed = 50
 		end
 		FlySpeed = tonumber(Speed)
-		SendNotify("System Broken","Fly speed updated.",5)
+		SendNotify("Mzury","Fly speed updated.",5)
 	end)
 end)
 
@@ -2565,12 +2565,12 @@ end)
 
 SaveCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = GetRoot(plr).Position
-	SendNotify("System Broken","Checkpoint saved.",5)
+	SendNotify("Mzury","Checkpoint saved.",5)
 end)
 
 ClearCheckpoint_Button.MouseButton1Click:Connect(function()
 	SavedCheckpoint = nil
-	SendNotify("System Broken","Checkpoint cleared.",5)
+	SendNotify("Mzury","Checkpoint cleared.",5)
 end)
 
 local flying = true
@@ -2964,10 +2964,10 @@ WhitelistTarget_Button.MouseButton1Click:Connect(function()
 					table.remove(ScriptWhitelist, i)
 				end
 			end
-			SendNotify("System Broken",TargetedPlayer.." removed from whitelist.",5)
+			SendNotify("Mzury",TargetedPlayer.." removed from whitelist.",5)
 		else
 			table.insert(ScriptWhitelist, Players[TargetedPlayer].UserId)
-			SendNotify("System Broken",TargetedPlayer.." added to whitelist.", 5)
+			SendNotify("Mzury",TargetedPlayer.." added to whitelist.", 5)
 		end
 	end
 end)
@@ -3384,7 +3384,7 @@ Day_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 14
 	else
-		SendNotify("System Broken","Please turn off shaders.",5)
+		SendNotify("Mzury","Please turn off shaders.",5)
 	end
 end)
 
@@ -3392,36 +3392,32 @@ Night_Button.MouseButton1Click:Connect(function()
 	if Shaders_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(255,0,0) then
 		game:GetService("Lighting").ClockTime = 19
 	else
-		SendNotify("System Broken","Please turn off shaders.",5)
+		SendNotify("Mzury","Please turn off shaders.",5)
 	end
 end)
 
 InfYield_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	loadstring(game:HttpGet('https://pastebin.com/raw/iMgUE4st'))()
 end)
 
 CMDX_Button.MouseButton1Click:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+	loadstring(game:HttpGet("https://pastebin.com/raw/rcYmpk1C",true))()
 end)
 
 Explode_Button.MouseButton1Click:Connect(function()
-	ToggleRagdoll(false)
-	task.wait()
-	plr.Character.Humanoid:ChangeState(0)
-	local bav = Instance.new("BodyAngularVelocity")
-	bav.Parent = GetRoot(plr)
-	bav.Name = "Spin"
-	bav.MaxTorque = Vector3.new(0,math.huge,0)
-	bav.AngularVelocity = Vector3.new(0,150,0)
-	task.wait(3)
-	plr.Character.Humanoid:ChangeState(15)
+	if not ExplodeEnabled then
+		ExplodeEnabled = true
+		SendNotify("Mzury","دیـوار.\nCredits: all.mzury")
+		loadstring(game:HttpGet("https://pastebin.com/raw/pFFa4nLp"))()
+	end
 end)
+
 
 FreeEmotes_Button.MouseButton1Click:Connect(function()
 	if not FreeEmotesEnabled then
 		FreeEmotesEnabled = true
-		SendNotify("System Broken","Loading free emotes.\nCredits: Gi#7331")
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/AllEmotes"))()
+		SendNotify("Mzury","دانس.\nCredits: all.mzury")
+		loadstring(game:HttpGet("https://pastebin.com/raw/eCpipCTH"))()
 	end
 end)
 
@@ -3458,7 +3454,7 @@ Players.PlayerRemoving:Connect(function(player)
 	pcall(function()
 		if player.Name == TargetedPlayer then
 			UpdateTarget(nil)
-			SendNotify("System Broken","Targeted player left/rejoined.",5)
+			SendNotify("Mzury","لێفت کر ڕەفی😂",5)
 		end
 	end)
 end)
@@ -3471,19 +3467,19 @@ plr.CharacterAdded:Connect(function(x)
 	end
 	if PotionDi_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionDi_Button)
-		SendNotify("System Broken","PotionDick was automatically disabled due to your character respawn",5)
+		SendNotify("Mzury","PotionDick was automatically disabled due to your character respawn",5)
 	end
 	if PotionFling_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(PotionFling_Button)
-		SendNotify("System Broken","PotionFling was automatically disabled due to your character respawn",5)
+		SendNotify("Mzury","PotionFling was automatically disabled due to your character respawn",5)
 	end
 	if AntiRagdoll_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(AntiRagdoll_Button)
-		SendNotify("System Broken","AntiRagdoll was automatically disabled due to your character respawn",5)
+		SendNotify("Mzury","AntiRagdoll was automatically disabled due to your character respawn",5)
 	end
 	if SpamMines_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(SpamMines_Button)
-		SendNotify("System Broken","SpamMines was automatically disabled due to your character respawn",5)
+		SendNotify("Mzury","SpamMines was automatically disabled due to your character respawn",5)
 	end
 	if Fly_Button.Ticket_Asset.ImageColor3 == Color3.fromRGB(0,255,0) then
 		ChangeToggleColor(Fly_Button)
@@ -3491,7 +3487,7 @@ plr.CharacterAdded:Connect(function(x)
 		Fly_Pad.Visible = false
 		KeyDownFunction:Disconnect()
 		KeyUpFunction:Disconnect()
-		SendNotify("System Broken","Fly was automatically disabled due to your character respawn",5)
+		SendNotify("Mzury","Fly was automatically disabled due to your character respawn",5)
 	end
 	x.Humanoid.Died:Connect(function()
 		pcall(function()
@@ -3525,12 +3521,12 @@ plr.CharacterAdded:Connect(function(x)
 		end
 		if not (count == original_ammount) then
 			SysBroker:Destroy()
-			SendNotify("System Broken","An unexpected error occurred, re-joining...")
+			SendNotify("Mzury","An unexpected error occurred, re-joining...")
 			game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 		end
 	else
 		SysBroker:Destroy()
-		SendNotify("System Broken","An unexpected error occurred, re-joining...")
+		SendNotify("Mzury","An unexpected error occurred, re-joining...")
 		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 	end
 	appearance:Destroy()
@@ -3541,7 +3537,7 @@ task.spawn(function()
 		pcall(function()
 			local GuiVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/version"))()
 			if version<GuiVersion then
-				SendNotify("System Broken","You are not using the latest version, please run the script again.",5)
+				SendNotify("Mzury","You are not using the latest version, please run the script again.",5)
 				task.wait(5)
 				SysBroker:Destroy()
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
@@ -3577,18 +3573,18 @@ task.spawn(function()
 
 			if (plr.Name ~= original_name) or (plr.DisplayName ~= original_display) or (plr.UserId ~= plr.CharacterAppearanceId) then
 				SysBroker:Destroy()
-				SendNotify("System Broken","An unexpected error occurred, re-joining...")
+				SendNotify("Mzury","An unexpected error occurred, re-joining...")
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 			end
 			if (date_1 ~= original_date) and (date_2 ~= original_date) and (date_3 ~= original_date) then
 				SysBroker:Destroy()
-				SendNotify("System Broken","An unexpected error occurred, re-joining...")
+				SendNotify("Mzury","An unexpected error occurred, re-joining...")
 				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 			end
 		end)
 	end
 end)
 
-SendNotify("System Broken","Gui developed by MalwareHub - Discord in your clipboard",10)
+SendNotify("Mzury","Gui developed by MalwareHub - Discord in your clipboard",10)
 setclipboard("https://discord.gg/RkhpySwNR9")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/premium"))() -- load the premium
